@@ -45,10 +45,10 @@ foreach(fnProjectPupils() as $lupa){
 ##############################
 
 foreach(fnProjectPupils() as $lupa){
-    echo $lupa['id']."<br>";
-    echo $lupa['nome']."<br>";
-    echo $lupa['email']."<br>";
-    echo $lupa['curso']."<br>";
+    echo $lupa->id."<br>";
+    echo $lupa->nome."<br>";
+    echo $lupa->email."<br>";
+    echo $lupa->curso."<br>";
     echo "<br>"."<br>"."<br>";
 };
 
@@ -57,9 +57,14 @@ echo fnDeletePupil(3);
 
 
 foreach(fnProjectPupils() as $lupa){
-    echo $lupa['id']."<br>";
-    echo $lupa['nome']."<br>";
-    echo $lupa['email']."<br>";
-    echo $lupa['curso']."<br>";
+    echo $lupa->id."<br>";
+    echo $lupa->nome."<br>";
+    echo $lupa->email."<br>";
+    echo $lupa->curso."<br>";
     echo "<br>"."<br>"."<br>";
 };
+
+$achar = fnFindPupil(1);
+
+
+var_dump($achar);

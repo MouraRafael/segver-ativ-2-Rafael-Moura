@@ -31,22 +31,22 @@
             <form action="./updateStudent.php" method="post">
                 <div class="form-group">
                     <label for="nome" class="form-label">Nome do aluno</label>
-                    <input value ="<?= $aluno['0']['nome']?>" class="form-control" type="text" name="txtAluno" id="nome" placeholeder="informe o nome do aluno" required>
+                    <input value ="<?= $aluno->nome?>" class="form-control" type="text" name="txtAluno" id="nome" placeholeder="informe o nome do aluno" required>
                 </div>
                 
                 
                 <div class="form-group">
                     <label for="email_id" class="form-label">e-mail do aluno</label>
-                    <input value ="<?= $aluno['0']['email']?>" class="form-control" type="text" name="txtemail" id="email_id" placeholeder="Digite o email do aluno" required>
+                    <input value ="<?= $aluno->email?>" class="form-control" type="text" name="txtemail" id="email_id" placeholeder="Digite o email do aluno" required>
                 </div>
                 
                 
                 <div class="form-group">
                     <label for="curso_id" class="form-label">Curso a matricular</label>
-                    <input value ="<?= $aluno['0']['curso']?>" class="form-control" type="text" name="txtCurso" id="curso_id" placeholeder="informeo curso em que será matriculado" required>
+                    <input value ="<?= $aluno->curso?>" class="form-control" type="text" name="txtCurso" id="curso_id" placeholeder="informeo curso em que será matriculado" required>
                 </div>
                                 
-                <button value ="<?= $aluno['0']['id']?>" name="txtid" class="btn btn-dark my-2" type="submit">Cadastrar</button>
+                <button value ="<?= $aluno->id?>" name="txtid" class="btn btn-dark my-2" type="submit">Cadastrar</button>
             </form>
         </fieldset>
     </div>

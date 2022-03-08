@@ -36,7 +36,7 @@ function fnProjectPupils(){
 
         $listpupil = array();
         
-        while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+        while($row = $stmt->fetch(PDO::FETCH_OBJ)){
             array_push($listpupil,$row);
         }
 
@@ -64,12 +64,10 @@ function fnFindPupil($pupil){
 
         if($stmt->execute()) {
             if($stmt->rowCount() > 0) {
-                while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-                    array_push($result,$row);
-                }
+                $row = $stmt->fetch(PDO::FETCH_OBJ);
             }
         }
-        return $result;
+        return $row;
         
     }
     catch(PDOExeption $error){
@@ -99,7 +97,7 @@ function fnFindPupilName($pupil){
 
         if($stmt->execute()) {
             if($stmt->rowCount() > 0) {
-                while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+                while($row = $stmt->fetch(PDO::FETCH_OBJ)){
                     array_push($result,$row);
                 }
             }
@@ -108,7 +106,7 @@ function fnFindPupilName($pupil){
         
     }
     catch(PDOExeption $error){
-        echo "Projection Error. Could not show student. Error: {$error->getMessage()}";
+        echo "Erro de projeção. Não pôde mostrar estudante. Error: {$error->getMessage()}";
     }finally{
         unset($con);
         unset($stmt);

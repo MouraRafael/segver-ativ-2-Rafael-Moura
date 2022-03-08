@@ -42,17 +42,17 @@ if(!empty($_GET['busca'])): ?>
             </thead>
             <tbody><?php foreach (fnFindPupilName($_GET['busca']) as $aluno): ?>
                 <tr>
-                    <td class="text-primary"><?= $aluno['id'] ?></td>
-                    <td class="text-primary"><?= $aluno['nome'] ?></td>
-                    <td class="text-primary"><?= $aluno['email'] ?></td>
-                    <td class="text-primary"><?= $aluno['curso'] ?></td>
+                    <td class="text-primary"><?= $aluno->id ?></td>
+                    <td class="text-primary"><?= $aluno->nome ?></td>
+                    <td class="text-primary"><?= $aluno->email ?></td>
+                    <td class="text-primary"><?= $aluno->curso ?></td>
                     <td class="text-primary">
-                        <a href="formUpdateStudent.php?id=<?= $aluno['id']?>" target="_blank">
+                        <a href="formUpdateStudent.php?id=<?= $aluno->id?>" target="_blank">
                             <span style="color: green">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </span>
                         </a>
-                        <a href="deleteStudent.php?id=<?= $aluno['id'] ?>" onclick="return confirm('Deseja realmente apagar o aluno do sistema?')" target="_blank">
+                        <a href="deleteStudent.php?id=<?= $aluno->id ?>" onclick="return confirm('Deseja realmente apagar o aluno do sistema?')" target="_blank">
                             <i class="fa-solid fa-eraser"></i>
                         </a>
                         
@@ -83,17 +83,17 @@ if(!empty($_GET['busca'])): ?>
             </thead>
             <tbody><?php foreach (fnProjectPupils() as $aluno): ?>
                 <tr>
-                    <td><?= $aluno['id'] ?></td>
-                    <td><?= $aluno['nome'] ?></td>
-                    <td><?= $aluno['email'] ?></td>
-                    <td><?= $aluno['curso'] ?></td>
+                    <td><?= $aluno->id ?></td>
+                    <td><?= $aluno->nome ?></td>
+                    <td><?= $aluno->email ?></td>
+                    <td><?= $aluno->curso ?></td>
                     <td>
-                        <a href="formUpdateStudent.php?id=<?= $aluno['id']?>" target="_blank">
+                        <a href="formUpdateStudent.php?id=<?= $aluno->id?>" target="_blank">
                             <span style="color: green">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </span>
                         </a>
-                        <a href="deleteStudent.php?id=<?= $aluno['id'] ?>" onclick="return confirm('Deseja realmente apagar o aluno do sistema?')" target="_blank">
+                        <a href="deleteStudent.php?id=<?= $aluno->id ?>" onclick="return confirm('Deseja realmente apagar o aluno do sistema?')" target="_blank">
                             <i class="fa-solid fa-eraser"></i>
                         </a>
                         
