@@ -41,7 +41,7 @@ function fnProjectPupils(){
         }
 
         return $listpupil;
-    }catch(PDOExeption $error){
+    }catch(PDOException $error){
         echo "Projection Error. Could not show list of students. Error: {$error->getMessage()}";
     }finally{
         unset($con);
@@ -70,7 +70,7 @@ function fnFindPupil($pupil){
         return $row;
         
     }
-    catch(PDOExeption $error){
+    catch(PDOException $error){
         echo "Projection Error. Could not show student. Error: {$error->getMessage()}";
     }finally{
         unset($con);
@@ -105,7 +105,7 @@ function fnFindPupilName($pupil){
         return $result;
         
     }
-    catch(PDOExeption $error){
+    catch(PDOException $error){
         echo "Erro de projeção. Não pôde mostrar estudante. Error: {$error->getMessage()}";
     }finally{
         unset($con);
